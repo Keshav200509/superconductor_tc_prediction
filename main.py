@@ -1,25 +1,3 @@
-# from src.data_loader import load_data
-# from src.preprocessing import split_data
-# from src.models import get_models
-# from src.evaluation import evaluate_model
-
-# def main():
-#     df = load_data("data/train.csv")
-
-#     X_train, X_test, y_train, y_test = split_data(df)
-
-#     models = get_models()
-
-#     results = {}
-
-#     for name, model in models.items():
-#         rmse, mae, r2 = evaluate_model(model, X_train, X_test, y_train, y_test)
-#         results[name] = {"RMSE": rmse, "MAE": mae, "R2": r2}
-#         print(f"{name} -> RMSE: {rmse:.3f}, MAE: {mae:.3f}, R2: {r2:.3f}")
-
-# if __name__ == "__main__":
-#     main()
-
 from src.data_loader import load_data
 from src.preprocessing import split_data
 from src.models import get_models

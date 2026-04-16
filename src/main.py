@@ -1,15 +1,15 @@
 from __future__ import annotations
 
-from src.data_loader import load_data
-from src.evaluation import (
+from data_loader import load_data
+from evaluation import (
     cross_validate_model,
     evaluate_model,
     segment_error,
     stability_test,
 )
-from src.models import get_models
-from src.preprocessing import split_data
-from src.visualization import plot_error_by_range
+from models import get_models
+from preprocessing import split_data
+from visualization import plot_error_by_range
 
 
 def main():
@@ -41,7 +41,10 @@ def main():
         print("Stability RMSEs:", stability)
 
         # Extra plot only for tuned models
-        if "Tuned" in name:
+        if "XGBoost (Tuned)" in name:
+            plot_predictions(y_test, preds)
+            plot_residuals(y_test, preds)
+            plot_feature_importance(model)
             plot_error_by_range(y_test, preds)
 
 

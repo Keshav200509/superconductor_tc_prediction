@@ -1,0 +1,13 @@
+Final Model Comparison:
+
+Linear Regression:
+RMSE: 17.378 | CV RMSE: 17.699
+
+Ridge:
+RMSE: 17.402 | CV RMSE: 17.705
+
+Random Forest (Tuned):
+RMSE: 8.953 | CV RMSE: 9.751
+
+XGBoost (Tuned):
+RMSE: 9.007 | CV RMSE: 9.720
